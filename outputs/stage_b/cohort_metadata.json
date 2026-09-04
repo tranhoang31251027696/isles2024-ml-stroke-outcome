@@ -1,0 +1,85 @@
+{
+    "n_total": 149,
+    "n_included": 129,
+    "n_excluded": 20,
+    "target_binary": "mRS_3_months_bin",
+    "class_distribution": {
+        "1.0": 85,
+        "0.0": 44
+    },
+    "all_predictors": [
+        "Sex",
+        "Wake-up",
+        "In-House",
+        "Referral",
+        "Atrial fibrillation",
+        "Hypertension",
+        "Diabetes",
+        "Hyperlipidemia",
+        "Anticoagulation",
+        "Lipid lowering drugs",
+        "Antiplatelet agents",
+        "mRS at admission",
+        "mRS premorbid",
+        "NIHSS at admission",
+        "Age",
+        "Glucose",
+        "Leucocytes",
+        "CRP",
+        "INR",
+        "Onset to door_min",
+        "Alert to door_min",
+        "Door to imaging_min",
+        "Door to groin_min",
+        "Door to first series_min",
+        "Door to recanalization_min",
+        "Time of intervention_min"
+    ],
+    "baseline_predictors": [
+        "Sex",
+        "Wake-up",
+        "In-House",
+        "Referral",
+        "Atrial fibrillation",
+        "Hypertension",
+        "Diabetes",
+        "Hyperlipidemia",
+        "Anticoagulation",
+        "Lipid lowering drugs",
+        "PAIs",
+        "mRS at admission",
+        "mRS premorbid",
+        "NIHSS at admission",
+        "Age",
+        "Glucose",
+        "Leucocytes",
+        "CRP",
+        "INR",
+        "Onset to door_min",
+        "Alert to door_min",
+        "Door to imaging_min"
+    ],
+    "leakage_predictors": [
+        "Door to groin_min",
+        "Door to first series_min",
+        "Door to recanalization_min",
+        "Time of intervention_min"
+    ],
+    "selection_bias_check": {
+        "Age": {
+            "included_mean": 0.0142,
+            "excluded_mean": 0.3361,
+            "diff": 0.3218
+        },
+        "NIHSS at admission": {
+            "included_mean": 10.7752,
+            "excluded_mean": 12.35,
+            "diff": 1.5748
+        },
+        "Sex": {
+            "included_mean": 0.5194,
+            "excluded_mean": 0.4,
+            "diff": 0.1194
+        }
+    }
+}

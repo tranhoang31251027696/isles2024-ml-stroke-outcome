@@ -1,0 +1,21 @@
+{
+  "consort": {
+    "total": 149,
+    "included": 129,
+    "excluded": 20
+  },
+  "age_comparison": {
+    "included_mean": 0.014247176860465102,
+    "excluded_mean": 0.3360951235,
+    "p_value": 0.16910754658336052
+  },
+  "nihss_comparison": {
+    "included_mean": 10.775193798449612,
+    "excluded_mean": 12.35,
+    "p_value": 0.28098086286177026
+  },
+  "sex_comparison": {
+    "p_value": 0.45131581451681413
+  },
+  "bias_conclusion": "No statistically significant selection bias detected (p > 0.05 for Age, NIHSS, and Sex)."
+}

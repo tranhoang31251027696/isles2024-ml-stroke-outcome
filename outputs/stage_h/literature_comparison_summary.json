@@ -1,0 +1,92 @@
+[
+  {
+    "Model":"[OUR FLAGSHIP] GBM + Feature Selection (Repeated 10-Fold CV)",
+    "Accuracy (%)":74.26,
+    "Mean OOF AUC":0.7495,
+    "AUC Std":0.0122,
+    "Brier Score":0.1989,
+    "Brier Std":0.0095,
+    "F1 Score":0.8126,
+    "F1 Std":0.0089
+  },
+  {
+    "Model":"[Otieno 2024] XGBoost (n=100 d=6 lr=0.1, MinMax)",
+    "Accuracy (%)":71.63,
+    "Mean OOF AUC":0.7388,
+    "AUC Std":0.0199,
+    "Brier Score":0.239,
+    "Brier Std":0.0084,
+    "F1 Score":0.7927,
+    "F1 Std":0.0097
+  },
+  {
+    "Model":"[Bogey 2025] GBM (n=100 d=3 lr=0.1, StdScaler)",
+    "Accuracy (%)":72.71,
+    "Mean OOF AUC":0.7368,
+    "AUC Std":0.0169,
+    "Brier Score":0.2063,
+    "Brier Std":0.0093,
+    "F1 Score":0.8005,
+    "F1 Std":0.008
+  },
+  {
+    "Model":"[Liu 2026] XGBoost (n=100 d=4 lr=0.05, StdScaler)",
+    "Accuracy (%)":72.25,
+    "Mean OOF AUC":0.7312,
+    "AUC Std":0.0086,
+    "Brier Score":0.2001,
+    "Brier Std":0.0034,
+    "F1 Score":0.7986,
+    "F1 Std":0.003
+  },
+  {
+    "Model":"[Bogey 2025] RF  (n=100 d=5, StdScaler)",
+    "Accuracy (%)":72.87,
+    "Mean OOF AUC":0.7261,
+    "AUC Std":0.0055,
+    "Brier Score":0.1945,
+    "Brier Std":0.0015,
+    "F1 Score":0.7974,
+    "F1 Std":0.0243
+  },
+  {
+    "Model":"[Li 2024]   Nomogram LR (ElasticNet, StdScaler)",
+    "Accuracy (%)":71.47,
+    "Mean OOF AUC":0.7079,
+    "AUC Std":0.0152,
+    "Brier Score":0.2075,
+    "Brier Std":0.0041,
+    "F1 Score":0.784,
+    "F1 Std":0.0055
+  },
+  {
+    "Model":"[Otieno 2024] SVM  (RBF C=10 g=0.01, MinMax)",
+    "Accuracy (%)":72.25,
+    "Mean OOF AUC":0.7019,
+    "AUC Std":0.0201,
+    "Brier Score":0.1985,
+    "Brier Std":0.0058,
+    "F1 Score":0.8145,
+    "F1 Std":0.0051
+  },
+  {
+    "Model":"[Otieno 2024] mLR  (L2 C=1, MinMax)",
+    "Accuracy (%)":68.53,
+    "Mean OOF AUC":0.7,
+    "AUC Std":0.0146,
+    "Brier Score":0.2152,
+    "Brier Std":0.0066,
+    "F1 Score":0.7509,
+    "F1 Std":0.012
+  },
+  {
+    "Model":"[Otieno 2024] ANN  (100-50 relu, MinMax)",
+    "Accuracy (%)":66.2,
+    "Mean OOF AUC":0.6289,
+    "AUC Std":0.0197,
+    "Brier Score":0.296,
+    "Brier Std":0.0249,
+    "F1 Score":0.7475,
+    "F1 Std":0.024
+  }
+]

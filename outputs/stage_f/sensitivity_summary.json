@@ -1,0 +1,12 @@
+{
+  "auc_22_baseline_predictors": 0.8447,
+  "auc_26_with_leakage_predictors": 0.8628,
+  "auc_uplift_from_leakage": 0.0182,
+  "leakage_predictors_tested": [
+    "Door to groin_min",
+    "Door to first series_min",
+    "Door to recanalization_min",
+    "Time of intervention_min"
+  ],
+  "note": "LR on full data \u2014 shows how much intra-procedural info adds (leakage check)"
+}

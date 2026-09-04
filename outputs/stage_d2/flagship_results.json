@@ -1,0 +1,47 @@
+{
+  "flagship_model": "GBM (fine-tuned)",
+  "gbm_pooled_auc": 0.753,
+  "gbm_pooled_acc": 73.64,
+  "gbm_pooled_brier": 0.1872,
+  "gbm_seed_aucs": [
+    0.7676,
+    0.7471,
+    0.7385,
+    0.7564,
+    0.7553
+  ],
+  "rf_pooled_auc": 0.7261,
+  "ensemble_auc": 0.748,
+  "best_gbm_params": {
+    "n_estimators": "80",
+    "max_depth": "3",
+    "learning_rate": "0.1",
+    "subsample": "0.7"
+  },
+  "model_path": "outputs/stage_d2/flagship_gbm_pipeline.pkl",
+  "feature_names": [
+    "Sex",
+    "Wake-up",
+    "In-House",
+    "Referral",
+    "Atrial fibrillation",
+    "Hypertension",
+    "Diabetes",
+    "Hyperlipidemia",
+    "Anticoagulation",
+    "Lipid lowering drugs",
+    "Antiplatelet agents",
+    "mRS at admission",
+    "mRS premorbid",
+    "NIHSS at admission",
+    "Age",
+    "Glucose",
+    "Leucocytes",
+    "CRP",
+    "INR",
+    "Onset to door_min",
+    "Alert to door_min",
+    "Door to imaging_min"
+  ],
+  "n_features": 22
+}

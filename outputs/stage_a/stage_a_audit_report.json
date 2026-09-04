@@ -1,0 +1,45 @@
+{
+  "total_samples": 149,
+  "valid_samples": 129,
+  "missing_samples": 20,
+  "target_distribution": {
+    "1": 85,
+    "0": 44
+  },
+  "total_predictors": 26,
+  "predictors": [
+    "Sex",
+    "Wake-up",
+    "In-House",
+    "Referral",
+    "Atrial fibrillation",
+    "Hypertension",
+    "Diabetes",
+    "Hyperlipidemia",
+    "Anticoagulation",
+    "Lipid lowering drugs",
+    "Antiplatelet agents",
+    "mRS at admission",
+    "mRS premorbid",
+    "NIHSS at admission",
+    "Age",
+    "Glucose",
+    "Leucocytes",
+    "CRP",
+    "INR",
+    "Onset to door_min",
+    "Alert to door_min",
+    "Door to imaging_min",
+    "Door to groin_min",
+    "Door to first series_min",
+    "Door to recanalization_min",
+    "Time of intervention_min"
+  ],
+  "leakage_risk_predictors": [
+    "Door to recanalization_min",
+    "Door to groin_min",
+    "Door to first series_min",
+    "Time of intervention_min"
+  ],
+  "high_missing_predictors": []
+}

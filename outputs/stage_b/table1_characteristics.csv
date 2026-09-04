@@ -1,0 +1,23 @@
+Variable,Type,Unit,All (n=129),Good (n=85),Poor (n=44)
+Age (years),mean ± SD,years,70.7 ± 14.7,67.9 ± 14.7,76.1 ± 13.4
+NIHSS at admission,mean ± SD,points,10.8 ± 6.0,9.9 ± 5.9,12.5 ± 5.9
+mRS premorbid,mean ± SD,0-6,0.5 ± 1.0,0.2 ± 0.5,1.1 ± 1.4
+mRS at admission,mean ± SD,0-6,3.9 ± 0.9,3.8 ± 1.0,4.3 ± 0.7
+Glucose,mean ± SD,z-score,-0.0 ± 0.8,-0.1 ± 0.8,0.1 ± 1.0
+Leucocytes,mean ± SD,z-score,-0.0 ± 1.0,-0.0 ± 0.8,-0.0 ± 1.4
+CRP,mean ± SD,z-score,0.0 ± 1.0,-0.1 ± 0.8,0.3 ± 1.3
+INR,mean ± SD,z-score,0.0 ± 1.0,0.1 ± 0.5,-0.0 ± 1.5
+Onset to door_min,mean ± SD,z-score,-0.0 ± 1.0,-0.1 ± 0.9,0.1 ± 1.2
+Alert to door_min,mean ± SD,z-score,-0.1 ± 0.8,-0.0 ± 0.9,-0.1 ± 0.1
+Door to imaging_min,mean ± SD,z-score,-0.0 ± 1.0,-0.0 ± 0.9,-0.1 ± 1.1
+"Male, n (%)",n (%),,67 (51.9%),53 (62.4%),14 (31.8%)
+"Wake-up stroke, n (%)",n (%),,37 (28.7%),18 (21.2%),19 (43.2%)
+"In-hospital stroke, n (%)",n (%),,5 (3.9%),2 (2.4%),3 (6.8%)
+"Referral transfer, n (%)",n (%),,18 (14.0%),9 (10.6%),9 (20.5%)
+"Atrial fibrillation, n (%)",n (%),,31 (24.0%),18 (21.2%),13 (29.5%)
+"Hypertension, n (%)",n (%),,73 (56.6%),48 (56.5%),25 (56.8%)
+"Diabetes mellitus, n (%)",n (%),,19 (14.7%),13 (15.3%),6 (13.6%)
+"Hyperlipidemia, n (%)",n (%),,39 (30.2%),29 (34.1%),10 (22.7%)
+"Anticoagulation, n (%)",n (%),,24 (18.6%),11 (12.9%),13 (29.5%)
+"Lipid-lowering drugs, n (%)",n (%),,39 (30.2%),25 (29.4%),14 (31.8%)
+"Antiplatelet agents, n (%)",n (%),,31 (24.0%),19 (22.4%),12 (27.3%)

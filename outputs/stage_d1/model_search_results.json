@@ -1,0 +1,68 @@
+{
+  "ElasticNet LR": {
+    "mean_seed_auc": 0.6897,
+    "std_seed_auc": 0.0177,
+    "seed_aucs": [
+      0.6869,
+      0.6693,
+      0.708,
+      0.6722,
+      0.712
+    ]
+  },
+  "L2 LR": {
+    "mean_seed_auc": 0.6894,
+    "std_seed_auc": 0.0252,
+    "seed_aucs": [
+      0.7021,
+      0.6401,
+      0.7104,
+      0.7011,
+      0.6933
+    ]
+  },
+  "SVM RBF": {
+    "mean_seed_auc": 0.6714,
+    "std_seed_auc": 0.0198,
+    "seed_aucs": [
+      0.6628,
+      0.6693,
+      0.644,
+      0.7048,
+      0.6762
+    ]
+  },
+  "SVM Linear": {
+    "mean_seed_auc": 0.5289,
+    "std_seed_auc": 0.0593,
+    "seed_aucs": [
+      0.6082,
+      0.512,
+      0.4278,
+      0.5439,
+      0.5528
+    ]
+  },
+  "GBM": {
+    "mean_seed_auc": 0.7385,
+    "std_seed_auc": 0.0158,
+    "seed_aucs": [
+      0.748,
+      0.7545,
+      0.7166,
+      0.7511,
+      0.7225
+    ]
+  },
+  "Random Forest": {
+    "mean_seed_auc": 0.7281,
+    "std_seed_auc": 0.0048,
+    "seed_aucs": [
+      0.7366,
+      0.723,
+      0.7283,
+      0.7283,
+      0.7243
+    ]
+  }
+}
