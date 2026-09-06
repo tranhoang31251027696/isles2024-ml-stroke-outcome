@@ -1,24 +1,24 @@
 {
   "flagship_model": "GBM (fine-tuned)",
-  "gbm_pooled_auc": 0.753,
-  "gbm_pooled_acc": 73.64,
-  "gbm_pooled_brier": 0.1872,
+  "gbm_pooled_auc": 0.7495,
+  "gbm_pooled_acc": 75.19,
+  "gbm_pooled_brier": 0.1878,
   "gbm_seed_aucs": [
     0.7676,
-    0.7471,
-    0.7385,
-    0.7564,
-    0.7553
+    0.7345,
+    0.7594,
+    0.7444,
+    0.7414
   ],
-  "rf_pooled_auc": 0.7261,
-  "ensemble_auc": 0.748,
+  "rf_pooled_auc": 0.7374,
+  "ensemble_auc": 0.7521,
   "best_gbm_params": {
     "n_estimators": "80",
     "max_depth": "3",
     "learning_rate": "0.1",
     "subsample": "0.7"
   },
-  "model_path": "outputs/stage_d2/flagship_gbm_pipeline.pkl",
+  "model_path": "C:\\Users\\USER\\Downloads\\processed_ISLES2024\\nhanh_2\\FINAL\\outputs\\stage_d2\\flagship_gbm_pipeline.pkl",
   "feature_names": [
     "Sex",
     "Wake-up",
@@ -30,7 +30,7 @@
     "Hyperlipidemia",
     "Anticoagulation",
     "Lipid lowering drugs",
-    "Antiplatelet agents",
+    "PAIs",
     "mRS at admission",
     "mRS premorbid",
     "NIHSS at admission",
