@@ -168,12 +168,21 @@ for m_name, cfg in search_configs.items():
             Xtr, Xva = X[tr_idx], X[va_idx]
             ytr, yva = y[tr_idx], y[va_idx]
 
+            # Clone pipe and vary classifier random_state with seed
+            from sklearn.base import clone as _clone
+            pipe_seed = _clone(cfg["pipe"])
+            if hasattr(pipe_seed.named_steps['clf'], 'random_state'):
+                try:
+                    pipe_seed.set_params(clf__random_state=seed)
+                except AttributeError:
+                    pass
+
             # Inner 3-fold GridSearch
             inner_cv = StratifiedKFold(n_splits=3, shuffle=True, random_state=seed)
             gs = GridSearchCV(
-                cfg["pipe"], cfg["params"],
+                pipe_seed, cfg["params"],
                 cv=inner_cv, scoring="roc_auc",
-                n_jobs=1, refit=True
+                n_jobs=-1, refit=True
             )
             gs.fit(Xtr, ytr)
             prob = gs.predict_proba(Xva)[:, 1]
