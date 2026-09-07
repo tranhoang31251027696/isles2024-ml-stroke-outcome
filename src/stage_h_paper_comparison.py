@@ -1,4 +1,3 @@
-"""
 Stage H — Head-to-Head Benchmark: Re-implement published model architectures
 on ISLES 2024 data (n=129, 22 pre-treatment features) using 10-fold CV.
 
