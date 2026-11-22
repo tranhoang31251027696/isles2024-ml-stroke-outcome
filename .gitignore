@@ -1,6 +1,5 @@
 # Public release: never add raw or derived patient-level data
 data/source_v7/
-outputs/
 **/*oof_predictions*.csv
 **/*patient_mean_predictions*.csv
 **/*checkpoint*/

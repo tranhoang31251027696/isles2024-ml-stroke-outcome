@@ -1,0 +1,10 @@
+{
+  "all_passed": true,
+  "rows": 5160,
+  "models": 8,
+  "seeds": 5,
+  "outer_folds": 10,
+  "outer_imputer_statistics_verified_fits": 400,
+  "fold_manifest_matches": true,
+  "source_cohort_sha256": "d9e1e79f276426266445e0990c5e551c919cc74efeeadc462a9269a8ec715fec"
+}

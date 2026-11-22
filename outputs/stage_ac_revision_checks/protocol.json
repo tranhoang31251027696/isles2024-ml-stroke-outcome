@@ -1,0 +1,58 @@
+{
+  "cohort_sha256": "d9e1e79f276426266445e0990c5e551c919cc74efeeadc462a9269a8ec715fec",
+  "seeds": [
+    42,
+    100,
+    2024,
+    777,
+    999
+  ],
+  "structures": [
+    [
+      50,
+      2,
+      0.05,
+      1.0
+    ],
+    [
+      80,
+      3,
+      0.1,
+      0.7
+    ],
+    [
+      100,
+      2,
+      0.1,
+      0.8
+    ],
+    [
+      150,
+      2,
+      0.05,
+      0.8
+    ],
+    [
+      100,
+      3,
+      0.05,
+      1.0
+    ],
+    [
+      150,
+      3,
+      0.1,
+      0.7
+    ]
+  ],
+  "weighting": [
+    "none",
+    "balanced"
+  ],
+  "inner_folds": 3,
+  "outer_folds": 10,
+  "Cand4_in_grid": true,
+  "selection_history": "auxiliary post-review diagnostic; not prespecified",
+  "statistics": "2000 patient bootstraps, conditional on saved predictions; auxiliary p unadjusted",
+  "source_sha256": "ae533e5815fef011d5cb8e2402cc252a73b3aa242eacebd1ebad2d2ad12136fd"
+}

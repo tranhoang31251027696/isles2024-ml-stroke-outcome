@@ -1,0 +1,10 @@
+{
+  "threshold": 0.5,
+  "threshold_optimized_on_validation": false,
+  "positive_class": "poor=1, 90-day mRS 3-6",
+  "aggregation": "compute on all 129 OOF predictions per seed, then average 5 seeds",
+  "SD": "population SD over seeds, not a confidence interval",
+  "confusion_counts_checked_against_sklearn": true,
+  "precision_zero_denominator_rule": "0, matching sklearn zero_division=0",
+  "training_rerun_needed": false
+}

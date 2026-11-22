@@ -1,0 +1,23 @@
+{
+  "eligible_families": [
+    "GBM",
+    "RandomForest",
+    "XGBoost",
+    "L2Logistic",
+    "ElasticNetLogistic",
+    "SVM_RBF",
+    "SVM_Linear",
+    "MLP"
+  ],
+  "GBM_configuration": "fixed Cand4; one candidate, not the auxiliary inner12 grid",
+  "selected_counts": {
+    "SVM_RBF": 40,
+    "GBM": 3,
+    "XGBoost": 2,
+    "RandomForest": 2,
+    "SVM_Linear": 1,
+    "L2Logistic": 1,
+    "MLP": 1
+  },
+  "total_outer_folds": 50
+}

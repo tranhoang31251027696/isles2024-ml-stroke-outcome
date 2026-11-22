@@ -1,0 +1,7 @@
+{
+  "original_held_out_probabilities_retained": true,
+  "all_eight_families_reproduced_on_one_outer_fold": true,
+  "coverage": "one prespecified fold, seed=42 fold=0, all eight families; not a rerun of all 50 outer folds",
+  "primary_model": "GBM",
+  "max_abs_error": 1.1102230246251565e-16
+}

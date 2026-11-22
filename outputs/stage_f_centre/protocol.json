@@ -1,0 +1,13 @@
+{
+  "purpose": "Exploratory internal-external validation between the two centres in this same public cohort",
+  "centre_labels": "Actual source Center field, excluded from predictors",
+  "seed": 42,
+  "inner_folds": 3,
+  "candidates_by_family": {
+    "GBM": 1,
+    "RandomForest": 12,
+    "SVM_RBF": 12
+  },
+  "primary_GBM": "fixed Cand4 after cohort exploration",
+  "caution": "Only 5 poor outcomes in centre 2; high uncertainty. Not independent external validation."
+}

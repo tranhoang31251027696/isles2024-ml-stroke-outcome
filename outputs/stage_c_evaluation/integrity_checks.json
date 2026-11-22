@@ -1,0 +1,15 @@
+{
+  "all_predictions_finite": true,
+  "probabilities_in_unit_interval": true,
+  "fold_manifest_matches_all_predictions": true,
+  "unique_patient_seed_model_predictions": true,
+  "candidate_counts_match_actual_design": true,
+  "GBM_candidates": 1,
+  "other_family_candidates": 12,
+  "outer_imputation_statistics_independently_verified": true,
+  "n_primary_outer_fits": 50,
+  "n_patient_bootstraps": 2000,
+  "bootstrap_scope": "conditional on saved fitted predictions; no training bootstrap",
+  "raw_score_note": "Fold-imputed raw clinical scores vary across seeds when components are missing. No whole-cohort filling or calibration used.",
+  "analysis_is_not_external_validation": true
+}

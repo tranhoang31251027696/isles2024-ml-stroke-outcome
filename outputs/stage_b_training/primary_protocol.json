@@ -1,0 +1,30 @@
+{
+  "seeds": [
+    42,
+    100,
+    2024,
+    777,
+    999
+  ],
+  "outer_folds": 10,
+  "inner_folds": 3,
+  "candidates_per_family": {
+    "GBM": 1,
+    "RandomForest": 12,
+    "XGBoost": 12,
+    "L2Logistic": 12,
+    "ElasticNetLogistic": 12,
+    "SVM_RBF": 12,
+    "SVM_Linear": 12,
+    "MLP": 12
+  },
+  "primary_selection": "fixed Cand4 after cohort exploration",
+  "source_cohort_sha256": "d9e1e79f276426266445e0990c5e551c919cc74efeeadc462a9269a8ec715fec",
+  "code_hashes": {
+    "round2_common.py": "1e2319bac9c133fece21ac93cea009d347b682ae083119cc9162f6e4d44b3e76",
+    "stage_b_train.py": "add167fe50279dae5e76a8630c271b8a65b1f76b2d307f9fd098cd0cedd79b88"
+  },
+  "clinical_scores": "fold-imputed components; raw held-out scores and outer-training logistic calibration both saved",
+  "inference": "patient bootstrap conditional on predictions; not a full retraining bootstrap",
+  "primary_model": "GBM"
+}

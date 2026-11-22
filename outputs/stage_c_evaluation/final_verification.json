@@ -1,0 +1,124 @@
+{
+  "checks": [
+    {
+      "check": "all149_IDs_and_all129_outcomes_match_historical_cohort",
+      "passed": true
+    },
+    {
+      "check": "all_299_retained_source_xlsx_CRC32",
+      "passed": true
+    },
+    {
+      "check": "core_training_replay_eight_families_one_outer_fold",
+      "passed": true
+    },
+    {
+      "check": "primary_GBM_comparators_and_declared_sensitivities_retained",
+      "passed": true
+    },
+    {
+      "check": "fixed_GBM_one_candidate_and_seven_families_12_candidates_verified",
+      "passed": true
+    },
+    {
+      "check": "all_model_point_estimates_recomputed_and_700_bootstrap_AUC_checks",
+      "passed": true
+    },
+    {
+      "check": "each_ROC_area_matches_its_plotted_vector_AUC",
+      "passed": true
+    },
+    {
+      "check": "DCA_and_delta_NB_at_039_recomputed_from_event_counts",
+      "passed": true
+    },
+    {
+      "check": "six_TIFF_figures_RGB",
+      "passed": true
+    },
+    {
+      "check": "primary_missing_sensitivity_complete_patient_coverage",
+      "passed": true
+    },
+    {
+      "check": "eight_fixed_literature_configurations_and_nine_point_estimates_verified",
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "figures": [
+    {
+      "file": "fig_calibration_oof.tiff",
+      "mode": "RGB",
+      "size": [
+        2066,
+        1610
+      ],
+      "dpi": [
+        "300.0",
+        "300.0"
+      ]
+    },
+    {
+      "file": "fig_dca_oof.tiff",
+      "mode": "RGB",
+      "size": [
+        2065,
+        1612
+      ],
+      "dpi": [
+        "300.0",
+        "300.0"
+      ]
+    },
+    {
+      "file": "fig_matched_algorithm_comparison.tiff",
+      "mode": "RGB",
+      "size": [
+        2069,
+        1462
+      ],
+      "dpi": [
+        "300.0",
+        "300.0"
+      ]
+    },
+    {
+      "file": "fig_roc_oof_probabilities.tiff",
+      "mode": "RGB",
+      "size": [
+        3265,
+        1399
+      ],
+      "dpi": [
+        "300.0",
+        "300.0"
+      ]
+    },
+    {
+      "file": "fig_shap_GBM_descriptive.tiff",
+      "mode": "RGB",
+      "size": [
+        2068,
+        1613
+      ],
+      "dpi": [
+        "300.0",
+        "300.0"
+      ]
+    },
+    {
+      "file": "fig_source_missingness.tiff",
+      "mode": "RGB",
+      "size": [
+        2068,
+        1613
+      ],
+      "dpi": [
+        "300.0",
+        "300.0"
+      ]
+    }
+  ],
+  "not_claimed": "No external-validation proof, no full retraining bootstrap, no completed manuscript submission update."
+}

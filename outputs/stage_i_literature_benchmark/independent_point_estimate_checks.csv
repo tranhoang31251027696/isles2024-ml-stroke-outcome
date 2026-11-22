@@ -1,0 +1,10 @@
+model,recomputed_auc,passed
+Fixed Cand4 GBM (this study),0.7599197860962568,True
+Bogey et al. - RF (d=5),0.7437967914438504,True
+Bogey et al. - GBM (d=3),0.7434224598930481,True
+Otieno et al. - XGBoost (d=6),0.7314973262032085,True
+Liu et al. - XGBoost (d=4),0.7297860962566844,True
+Li et al. - ElasticNet LR,0.714385026737968,True
+Otieno et al. - SVM RBF,0.7109625668449198,True
+Otieno et al. - mLR (L2),0.7080213903743315,True
+Otieno et al. - ANN (100-50),0.6278074866310159,True

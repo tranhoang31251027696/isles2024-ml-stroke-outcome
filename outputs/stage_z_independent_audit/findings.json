@@ -1,0 +1,55 @@
+[
+  {
+    "severity": "major",
+    "finding": "Cand4 is fixed, not a 12-candidate inner-selected GBM; reporting all eight families as equally tuned or GBM selected from 12 candidates is inaccurate.",
+    "files": [
+      "src/round2_common.py",
+      "src/stage_b_train.py",
+      "src/stage_m_build_manuscript.py"
+    ]
+  },
+  {
+    "severity": "major",
+    "finding": "The claimed 0.7599/0.7807 values are reproducible but already present in a multi-variant V2 outcome comparison. Calling this choice pre-specified is not supported by that analysis history; selecting it using this cohort creates selection optimism not removed by merely fixing it in V3.",
+    "files": [
+      "README.md",
+      "src/round2_common.py",
+      "../V2/outputs/stage_r_gbm_tuning_comparison/all_gbm_tuning_variants_comparison.csv"
+    ]
+  },
+  {
+    "severity": "major",
+    "finding": "Conditional bootstrap p-values/intervals assume these predictions/configuration are fixed and do not correct the historical configuration search or quantify full training uncertainty. p=0.001 must not be presented as selection-adjusted confirmation.",
+    "files": [
+      "README.md"
+    ]
+  },
+  {
+    "severity": "moderate",
+    "finding": "The manuscript builder changes ranking claims but retains the obsolete 12-candidate GBM methods, equal-tuning figure caption and hard-coded SHAP top features. It is not synchronized with fixed Cand4.",
+    "files": [
+      "src/stage_m_build_manuscript.py"
+    ]
+  },
+  {
+    "severity": "moderate",
+    "finding": "The variant comparison mixes mean-seed AUC with ensemble-threshold accuracy/recall/F1/Brier. These are valid separate estimands but must be labeled; use the audit mean-seed classification metrics for like-for-like comparison.",
+    "files": [
+      "../V2/outputs/stage_r_gbm_tuning_comparison/all_gbm_tuning_variants_comparison.csv"
+    ]
+  },
+  {
+    "severity": "moderate",
+    "finding": "Legacy experimental scripts include unused HGB variants and some baseline labels now reference V3 ROOT rather than V2; copying these scripts does not preserve their original V2 baseline interpretation.",
+    "files": [
+      "src/stage_r_gbm_tuning_comparison.py"
+    ]
+  },
+  {
+    "severity": "status",
+    "finding": "Active V3 training output is being written during audit; this audit does not certify that the entire downstream figure/DCA/sensitivity/manuscript pipeline has finished or is synchronized.",
+    "files": [
+      "outputs/stage_b_training"
+    ]
+  }
+]

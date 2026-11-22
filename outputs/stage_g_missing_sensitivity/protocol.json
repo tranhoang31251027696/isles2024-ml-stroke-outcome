@@ -1,0 +1,22 @@
+{
+  "drop_heavy": [
+    "mRS at admission",
+    "mRS premorbid",
+    "Leucocytes",
+    "CRP",
+    "INR",
+    "Onset to door_min",
+    "Alert to door_min"
+  ],
+  "retained_features": 15,
+  "continuous_iterative_imputer": "10 iterations, fit within inner/outer training, continuous/ordinal predictors only; binary predictors retain training-mode imputation",
+  "source_cohort_sha256": "d9e1e79f276426266445e0990c5e551c919cc74efeeadc462a9269a8ec715fec",
+  "script_sha256": "ea54b8e47479d0165e15d63bfe1d3e848a9c2f784102e1f45bb406f2e87dd174",
+  "same_primary_seeds_and_folds": true,
+  "candidates_by_family": {
+    "GBM": 1,
+    "RandomForest": 12,
+    "SVM_RBF": 12
+  },
+  "primary_GBM": "fixed Cand4"
+}

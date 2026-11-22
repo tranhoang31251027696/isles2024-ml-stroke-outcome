@@ -9,9 +9,10 @@ The primary analysis uses a fixed `GradientBoostingClassifier` with 150 trees, m
 - `src/`: the numerical V3 pipeline and verification scripts.
 - `results/figures/`: six manuscript figures and one supplementary figure.
 - `results/tables/`: aggregate manuscript and supplementary result tables, plus revision notes.
+- `outputs/`: stage-organized, aggregate pipeline outputs (protocols, diagnostics, tables, and figures).
 - `data/README.md`: instructions for obtaining the public source data.
 
-This public package deliberately excludes patient-level clinical tables, raw workbooks, out-of-fold patient predictions, fold/checkpoint files, trained model artefacts, development caches, and manuscript submission files.
+This public package deliberately excludes patient-level clinical tables, raw workbooks, out-of-fold patient predictions, fold/checkpoint files, trained model artefacts, development caches, and manuscript submission files. The `outputs/` directory contains only aggregate, non-patient-level materials.
 
 ## Data access
 
