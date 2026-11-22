@@ -1,19 +1,9 @@
-ĐÃ ĐỒNG BỘ BỘ LATEX V3 NGÀY 21/11/2026
+V3 public release notes
 
-File chính: V3/latex/manuscript.tex, manuscript_track_changes.tex, supplement.tex và response_to_reviewers.tex; PDF cùng tên đã được biên dịch lại.
+This repository contains the final V3 analysis code, aggregate analytical outputs, publication figures and supplementary tables accompanying the revised manuscript.
 
-1. Đối chiếu số bảng: 1 glossary, 2 baseline, 3 algorithm, 4 literature, 5 clinical. Giữ nguyên số bảng trong lời reviewer trích nguyên văn.
-2. Chạy lại GBM inner-tuned 12 cấu hình trên nguồn missingness hiện tại: AUC 0.7320 ± 0.0232; ensemble 0.7524; Brier 0.2085. Giá trị 0.7385 là screening lịch sử, không phải kết quả auxiliary đã xác minh trên đầu vào hiện tại. Cand4 có trong lưới 12 cấu hình. Cand4 trừ inner-tuned: 0.0279 (CI 0.0125–0.0442), điều kiện theo dự đoán, không hiệu chỉnh lịch sử chọn mô hình.
-3. Thêm auxiliary vào Abstract, Results, Discussion, Table 3, S2, S3A và Fig 2. Ngoài tập 7 so sánh Holm ban đầu. Family selection 0.7258 có fixed Cand4 và 7 family khác; không có auxiliary GBM inner-tuned mới.
-4. CRP: Centre 2 thiếu 40/40, Centre 1 thiếu 9/89. Median training-fold thực tế 0.22–0.32 mg/dL. Cơ chế proxy là giả thuyết; thêm kiểm tra bỏ CRP (0.7301), cờ CRP thiếu (0.7571) và centre (0.7627), không chọn lại mô hình chính theo các kiểm tra này.
-5. L2 C=1 StandardScaler: 0.6664; MinMaxScaler: 0.7080; inner-tuned: 0.6288. Không thể khẳng định over-shrinkage là nguyên nhân; paired CI và kiểm tra scaler ở S6F.
-6. GBM trung bình theo fold 0.7591 (SD 0.1576), gần mean seed 0.7599; thêm vào main text và R1.1. Không suy rộng thành bằng chứng pooling luôn không bias.
-7. Sửa exactly consistent thành close to, dấu xấp xỉ và các claim quá chắc; thêm Additional changes by the authors. Nội dung được chấp nhận của marked khớp clean. Tất cả 20 trích dẫn reviewer/editor giữ nguyên.
+The primary analysis evaluates a fixed GradientBoostingClassifier using repeated nested cross-validation. Supplementary materials distinguish the fixed primary analysis from post-review auxiliary analyses, including an inner-tuned GBM comparison and sensitivity analyses for missingness, centre and preprocessing choices. These auxiliary analyses do not replace the primary model and are reported with their corresponding limitations.
 
-KẾT QUẢ MÔ HÌNH CHÍNH VẪN GIỮ NGUYÊN. Không thay dữ liệu hoặc outputs training/evaluation gốc. Bản trước sửa được giữ trong before/.
+Patient-level data, individual out-of-fold predictions, fold assignments, checkpoints and trained model objects are not included. The public source ISLES 2024 data release is identified in data/README.md.
 
-Kiểm tra bổ sung và dự đoán OOF ở V3/outputs/stage_ac_revision_checks. Hai script tái lập ở V3/src/stage_ac_revision_checks.py và stage_ad_sync_latex_revision.py. Các kiểm tra bổ sung tạo 3,870 dự đoán; 645 phân công subject/seed/fold khớp primary.
-
-Chưa xác minh được nội dung release công khai tại DOI code 10.5281/zenodo.17892024 hoặc GitHub đã cung cấp do truy cập từ công cụ không thành công; không xem việc DOI lớn hơn DOI dataset là bằng chứng hợp lệ. URL/DOI tác giả cung cấp được giữ nguyên. Cần kiểm tra đích release trước khi nộp.
-
-Lần này cập nhật LaTeX/PDF. Các DOCX trước đây không được ghi đè.
+For detailed methods, estimates and limitations, see S1_Text_analysis_details.txt and the accompanying manuscript.

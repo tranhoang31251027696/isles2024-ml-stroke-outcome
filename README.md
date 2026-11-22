@@ -46,4 +46,4 @@ See `results/tables/V3_revision_notes.txt` for the reconciled reviewer-response 
 
 ## Citation
 
-If you use this code, cite the accompanying manuscript and the ISLES 2024 data release. A permanent code archive DOI will be added here after the public repository release is finalized.
+If you use this code, please cite the accompanying manuscript and the ISLES 2024 data release.
