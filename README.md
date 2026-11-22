@@ -1,4 +1,4 @@
-# ISLES 2024 Stroke Outcome Prediction — V3
+# ISLES 2024 Stroke Outcome Prediction - V3
 
 Reproducible analysis code and publication-ready aggregate results for predicting 90-day functional outcome after mechanical thrombectomy using pre-procedural clinical variables from ISLES 2024.
 
