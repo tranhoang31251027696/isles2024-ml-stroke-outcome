@@ -1,0 +1,5 @@
+All checks used the same patients, five seeds and 10 outer folds with training-only preprocessing. They were added after review, do not select a replacement primary model, and use conditional paired patient-bootstrap intervals.
+
+CRP missingness was verified as 40/40 in Centre 2 and 9/89 in Centre 1. Outer-training CRP medians ranged from 0.22 to 0.32 mg/dL. Adding a missingness indicator or centre does not establish a causal mechanism.
+
+For fixed C=1 logistic regression, StandardScaler minus the inner-tuned LR was 0.0376 (95% CI -0.0308 to 0.1026). StandardScaler minus MinMaxScaler at fixed C=1 was -0.0416 (95% CI -0.0872 to -0.0020).

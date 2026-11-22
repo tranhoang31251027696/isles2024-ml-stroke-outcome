@@ -226,3 +226,26 @@ Candidate configurations for the matched comparison
 }
 
 GBM uses one fixed configuration: 150 trees, depth 2, learning rate 0.05, subsample 0.8 and no class weighting. The seven other families each have six structures crossed with two weighting modes (12 candidates). Cand4 was retained after inspecting exploratory results on this cohort, not specified before data analysis. Imputation, scaling and class weights are fitted within each training partition. All 22 predictors are retained. No feature reduction filter is used. All validation probabilities refer to unfavorable outcome. Clinical score components use training-mode imputation for binary variables and training-median for Age/NIHSS. THRIVE uses age cutpoints 60/80, NIHSS cutpoints 11/21 (0/2/4 points) and one point each for hypertension, diabetes and atrial fibrillation. SPAN-100 is the binary indicator Age+NIHSS >=100. Clinical calibration is L2 logistic regression, C=1, fitted on outer training only. Missingness-only LR and procedural-variable comparisons use the same outer folds.
+
+Auxiliary GBM search (post-review)
+
+An auxiliary GBM search evaluated six tuples of (n_estimators, max_depth, learning_rate, subsample), each crossed with unweighted and training-balanced fits, yielding 12 candidate pipelines. The fixed primary configuration, (150, 2, 0.05, 0.8) with unweighted fitting, was included in this grid. ROC AUC was used for selection in the same three inner folds; preprocessing was refitted within each inner-training split, and the selected pipeline was refitted on the outer-training set. This auxiliary search is distinct from the historical screening analysis.
+
+Candidate | Tuple (n_estimators, max_depth, learning_rate, subsample) | Weighting | Outer folds selected | Percentage
+1 | (50, 2, 0.05, 1.0) | Unweighted | 3 | 6%
+2 | (50, 2, 0.05, 1.0) | Balanced | 0 | 0%
+3 | (80, 3, 0.10, 0.7) | Unweighted | 4 | 8%
+4 | (80, 3, 0.10, 0.7) | Balanced | 0 | 0%
+5 | (100, 2, 0.10, 0.8) | Unweighted | 8 | 16%
+6 | (100, 2, 0.10, 0.8) | Balanced | 4 | 8%
+7* | (150, 2, 0.05, 0.8) | Unweighted | 11 | 22%
+8 | (150, 2, 0.05, 0.8) | Balanced | 2 | 4%
+9 | (100, 3, 0.05, 1.0) | Unweighted | 10 | 20%
+10 | (100, 3, 0.05, 1.0) | Balanced | 0 | 0%
+11 | (150, 3, 0.10, 0.7) | Unweighted | 7 | 14%
+12 | (150, 3, 0.10, 0.7) | Balanced | 1 | 2%
+Total |  |  | 50 | 100%
+
+* Primary fixed study configuration, selected in 11/50 outer folds (22%).
+
+The auxiliary inner-tuned pipeline achieved mean seed OOF AUC 0.7320 +/- 0.0232 (95% CI 0.6467-0.8120; patient-mean ensemble AUC 0.7524; Brier score 0.2085). Its paired difference versus the fixed primary GBM was delta AUC = 0.0279 (conditional paired 95% CI 0.0125-0.0442). This difference includes both configuration variation and inner-CV tuning noise; it is not a selection-adjusted estimate of the retained fixed configuration.
