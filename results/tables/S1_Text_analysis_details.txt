@@ -1,0 +1,228 @@
+Candidate configurations for the matched comparison
+
+{
+  "GBM": [
+    {
+      "n_estimators": 150,
+      "max_depth": 2,
+      "learning_rate": 0.05,
+      "subsample": 0.8
+    }
+  ],
+  "RandomForest": [
+    {
+      "n_estimators": 100,
+      "max_depth": 3,
+      "min_samples_leaf": 2
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": 3,
+      "min_samples_leaf": 4
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": 5,
+      "min_samples_leaf": 2
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": 5,
+      "min_samples_leaf": 4
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": null,
+      "min_samples_leaf": 2
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": null,
+      "min_samples_leaf": 4
+    }
+  ],
+  "XGBoost": [
+    {
+      "n_estimators": 50,
+      "max_depth": 2,
+      "learning_rate": 0.05,
+      "subsample": 1.0,
+      "colsample_bytree": 0.8,
+      "reg_lambda": 1.0
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": 2,
+      "learning_rate": 0.1,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "reg_lambda": 1.0
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "reg_lambda": 5.0
+    },
+    {
+      "n_estimators": 150,
+      "max_depth": 2,
+      "learning_rate": 0.05,
+      "subsample": 1.0,
+      "colsample_bytree": 0.8,
+      "reg_lambda": 5.0
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": 3,
+      "learning_rate": 0.1,
+      "subsample": 0.7,
+      "colsample_bytree": 0.8,
+      "reg_lambda": 1.0
+    },
+    {
+      "n_estimators": 150,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "reg_lambda": 5.0
+    }
+  ],
+  "L2Logistic": [
+    {
+      "C": 0.001
+    },
+    {
+      "C": 0.01
+    },
+    {
+      "C": 0.1
+    },
+    {
+      "C": 1
+    },
+    {
+      "C": 10
+    },
+    {
+      "C": 100
+    }
+  ],
+  "ElasticNetLogistic": [
+    {
+      "C": 0.01,
+      "l1_ratio": 0.1
+    },
+    {
+      "C": 0.01,
+      "l1_ratio": 0.9
+    },
+    {
+      "C": 0.1,
+      "l1_ratio": 0.1
+    },
+    {
+      "C": 0.1,
+      "l1_ratio": 0.9
+    },
+    {
+      "C": 1.0,
+      "l1_ratio": 0.1
+    },
+    {
+      "C": 1.0,
+      "l1_ratio": 0.9
+    }
+  ],
+  "SVM_RBF": [
+    {
+      "C": 0.1,
+      "gamma": "scale"
+    },
+    {
+      "C": 1,
+      "gamma": "scale"
+    },
+    {
+      "C": 10,
+      "gamma": "scale"
+    },
+    {
+      "C": 1,
+      "gamma": 0.01
+    },
+    {
+      "C": 10,
+      "gamma": 0.01
+    },
+    {
+      "C": 10,
+      "gamma": 0.1
+    }
+  ],
+  "SVM_Linear": [
+    {
+      "C": 0.001
+    },
+    {
+      "C": 0.01
+    },
+    {
+      "C": 0.1
+    },
+    {
+      "C": 1
+    },
+    {
+      "C": 10
+    },
+    {
+      "C": 100
+    }
+  ],
+  "MLP": [
+    {
+      "hidden_layer_sizes": [
+        16
+      ],
+      "alpha": 0.0001
+    },
+    {
+      "hidden_layer_sizes": [
+        16
+      ],
+      "alpha": 0.01
+    },
+    {
+      "hidden_layer_sizes": [
+        32
+      ],
+      "alpha": 0.0001
+    },
+    {
+      "hidden_layer_sizes": [
+        32
+      ],
+      "alpha": 0.01
+    },
+    {
+      "hidden_layer_sizes": [
+        32,
+        16
+      ],
+      "alpha": 0.0001
+    },
+    {
+      "hidden_layer_sizes": [
+        32,
+        16
+      ],
+      "alpha": 0.01
+    }
+  ]
+}
+
+GBM uses one fixed configuration: 150 trees, depth 2, learning rate 0.05, subsample 0.8 and no class weighting. The seven other families each have six structures crossed with two weighting modes (12 candidates). Cand4 was retained after inspecting exploratory results on this cohort, not specified before data analysis. Imputation, scaling and class weights are fitted within each training partition. All 22 predictors are retained. No feature reduction filter is used. All validation probabilities refer to unfavorable outcome. Clinical score components use training-mode imputation for binary variables and training-median for Age/NIHSS. THRIVE uses age cutpoints 60/80, NIHSS cutpoints 11/21 (0/2/4 points) and one point each for hypertension, diabetes and atrial fibrillation. SPAN-100 is the binary indicator Age+NIHSS >=100. Clinical calibration is L2 logistic regression, C=1, fitted on outer training only. Missingness-only LR and procedural-variable comparisons use the same outer folds.

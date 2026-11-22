@@ -1,0 +1,18 @@
+# Public release: never add raw or derived patient-level data
+data/source_v7/
+outputs/
+**/*oof_predictions*.csv
+**/*patient_mean_predictions*.csv
+**/*checkpoint*/
+**/*.joblib
+**/*.pkl
+**/__pycache__/
+**/*.pyc
+.venv/
+.pytest_cache/
+
+# Build artefacts
+*.aux
+*.log
+*.out
+*.synctex.gz

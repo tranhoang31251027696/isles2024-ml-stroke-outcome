@@ -1,0 +1,7 @@
+stratum,model,n,n_poor,mean_seed_auc
+all_three_labs_observed,GBM,79,32,0.7636968085106383
+all_three_labs_observed,RandomForest,79,32,0.7526595744680851
+all_three_labs_observed,SVM_RBF,79,32,0.729188829787234
+all_three_labs_missing,GBM,48,11,0.6769041769041768
+all_three_labs_missing,RandomForest,48,11,0.62997542997543
+all_three_labs_missing,SVM_RBF,48,11,0.6781326781326781
