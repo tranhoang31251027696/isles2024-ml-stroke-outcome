@@ -14,6 +14,23 @@ def main():
     out=ROOT/'outputs/stage_c_evaluation';out.mkdir(exist_ok=True)
     raw,y,mask,_=load_cohort();ids=raw.subject_id.tolist();n=len(y)
     df=pd.read_csv(ROOT/'outputs/stage_b_training/primary_oof_predictions.csv')
+    if not any(df.model.str.endswith('_raw')):
+        from sklearn.model_selection import StratifiedKFold
+        raw_scores=[]
+        for seed in SEEDS:
+            for fold,(tr,va) in enumerate(StratifiedKFold(10,shuffle=True,random_state=seed).split(raw,y)):
+                val_ids=[ids[i] for i in va]; tr_df=raw.iloc[tr]; va_df=raw.iloc[va]
+                cols=[va_df[c].fillna(tr_df[c].mode().iloc[0] if c in BINARY else tr_df[c].median()).to_numpy() for c in ['Age','NIHSS at admission','Hypertension','Diabetes','Atrial fibrillation']]
+                age,nih,ht,dm,af=cols
+                thrive=np.where(age>=80,2,np.where(age>=60,1,0))+np.where(nih>=21,4,np.where(nih>=11,2,0))+ht+dm+af
+                span=(age+nih>=100).astype(float); agenih=age+nih
+                for i,sid in enumerate(val_ids):
+                    raw_scores.extend([
+                        {'subject_id':sid,'seed':seed,'fold':fold,'model':'THRIVE_raw','value':thrive[i],'value_type':'raw_score'},
+                        {'subject_id':sid,'seed':seed,'fold':fold,'model':'SPAN100_raw','value':span[i],'value_type':'raw_score'},
+                        {'subject_id':sid,'seed':seed,'fold':fold,'model':'AgeNIHSS_raw','value':agenih[i],'value_type':'raw_score'}
+                    ])
+        df=pd.concat([df,pd.DataFrame(raw_scores)],ignore_index=True)
     counts=bootstrap_counts(y,2000,42);M={};boots={};stats=[];seedsrows=[];calrows=[];rocrows=[]
     for name,g in df.groupby('model'):
         m=g.pivot(index='subject_id',columns='seed',values='value').loc[ids,SEEDS].to_numpy();assert np.isfinite(m).all();M[name]=m

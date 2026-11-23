@@ -12,7 +12,7 @@ The primary analysis uses a fixed `GradientBoostingClassifier` with 150 trees, m
 - `outputs/`: stage-organized pipeline outputs, including cross-validation fold splits (`stage_a_data/fold_manifest.csv`), label-free out-of-fold predicted probabilities across models and seeds (`stage_b_training/primary_oof_predictions.csv`, `stage_c_evaluation/patient_mean_predictions.csv`, `stage_ac_revision_checks/oof_predictions.csv`), stage protocols, and aggregate benchmark tables.
 - `data/README.md`: instructions for obtaining the public source data.
 
-To prevent duplicate hosting of patient-level clinical records, original clinical predictors (e.g., age, NIHSS, laboratory values) and ground-truth 90-day mRS outcome labels are not redistributed. Readers can download the source ISLES 2024 v7 release into `data/source_v7/` and evaluate the saved predictions directly or retrain the full pipeline from scratch.
+To prevent duplicate hosting of patient-level clinical records, original clinical predictors (e.g., age, NIHSS, laboratory values), derived raw clinical scores (e.g., THRIVE, SPAN-100, Age+NIHSS sums), and ground-truth 90-day mRS outcome labels are not redistributed. Out-of-fold predictions contain exclusively machine learning model predicted probabilities in [0, 1] indexed by anonymized subject IDs. Readers can download the source ISLES 2024 v7 release into `data/source_v7/` and evaluate the saved predictions directly or retrain the full pipeline from scratch.
 
 ## Generative AI disclosure
 
@@ -21,6 +21,12 @@ During manuscript preparation and revision, OpenAI GPT-5.6 Terra and GPT-6.1 Sol
 ## Data access and licensing
 
 The ISLES 2024 training data are publicly available from Zenodo version 7: [10.5281/zenodo.17652035](https://doi.org/10.5281/zenodo.17652035) under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license (CC BY-NC-SA 4.0). Download the source data and place them under `data/source_v7/` as described in [data/README.md](data/README.md).
+
+## Project licensing
+
+This repository is dual-licensed:
+- **Software and source code**: All Python scripts, pipeline runners, figure generators, and verification utilities in `src/` are distributed under the [MIT License](LICENSE).
+- **Derived scientific data artifacts**: Fold assignments (`outputs/stage_a_data/fold_manifest.csv`), label-free out-of-fold predicted probabilities (`outputs/stage_b_training/primary_oof_predictions.csv`, `outputs/stage_c_evaluation/patient_mean_predictions.csv`, `outputs/stage_ac_revision_checks/oof_predictions.csv`), and aggregate result tables are derived from the ISLES 2024 training dataset and are distributed in accordance with ShareAlike provisions under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 ## Environment and analysis
 
