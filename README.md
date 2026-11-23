@@ -1,4 +1,4 @@
-# ISLES 2024 Stroke Outcome Prediction - V3
+# ISLES 2024 Stroke Outcome Prediction
 
 Reproducible analysis code and publication-ready aggregate results for predicting 90-day functional outcome after mechanical thrombectomy using pre-procedural clinical variables from ISLES 2024.
 
@@ -6,7 +6,7 @@ The primary analysis uses a fixed `GradientBoostingClassifier` with 150 trees, m
 
 ## What is included
 
-- `src/`: the numerical V3 pipeline, verification scripts, and figure generation routines.
+- `src/`: the numerical analysis pipeline, verification scripts, and figure generation routines.
 - `results/figures/`: six manuscript figures and one supplementary figure.
 - `results/tables/`: aggregate manuscript and supplementary result tables, plus revision notes.
 - `outputs/`: stage-organized pipeline outputs, including cross-validation fold splits (`stage_a_data/fold_manifest.csv`), label-free out-of-fold predicted probabilities across models and seeds (`stage_b_training/primary_oof_predictions.csv`, `stage_c_evaluation/patient_mean_predictions.csv`, `stage_ac_revision_checks/oof_predictions.csv`), stage protocols, and aggregate benchmark tables.
@@ -59,7 +59,7 @@ The run reconstructs the release table, applies fold-specific preprocessing, eva
 
 The primary estimate is the mean of five within-seed out-of-fold AUCs. Patient-mean ensemble AUC is a distinct secondary estimand used for ROC, calibration and probability-based clinical comparisons. Bootstrap intervals condition on the retained configuration and fitted predictions. The cohort is small, covariate missingness is substantial and centre-specific, and no independent external validation was performed.
 
-See `results/tables/V3_revision_notes.txt` for the reconciled reviewer-response corrections and current auxiliary diagnostics.
+See `results/tables/release_notes.txt` for notes on the reconciled reviewer-response corrections and current auxiliary diagnostics.
 
 ## Citation
 

@@ -1,9 +1,0 @@
-V3 public release notes
-
-This repository contains the final V3 analysis code, aggregate analytical outputs, publication figures and supplementary tables accompanying the revised manuscript.
-
-The primary analysis evaluates a fixed GradientBoostingClassifier using repeated nested cross-validation. Supplementary materials distinguish the fixed primary analysis from post-review auxiliary analyses, including an inner-tuned GBM comparison and sensitivity analyses for missingness, centre and preprocessing choices. These auxiliary analyses do not replace the primary model and are reported with their corresponding limitations.
-
-Patient-level data, individual out-of-fold predictions, fold assignments, checkpoints and trained model objects are not included. The public source ISLES 2024 data release is identified in data/README.md.
-
-For detailed methods, estimates and limitations, see S1_Text_analysis_details.txt and the accompanying manuscript.

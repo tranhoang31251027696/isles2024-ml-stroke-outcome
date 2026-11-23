@@ -1,10 +1,10 @@
-# Literature benchmark — V3
+# Literature benchmark
 
-Eight fixed literature configurations were refitted on 129 patients with the same 22 predictors and 5 seeds × 10 outer folds used for the V3 GBM (400 fits). Official v7 source missingness was used; binary variables were mode-imputed, other variables median-imputed, and scaling was fitted within training folds. Both XGBoost models used XGBClassifier.
+Eight fixed literature configurations were refitted on 129 patients with the same 22 predictors and 5 seeds × 10 outer folds used for the primary GBM (400 fits). Official v7 source missingness was used; binary variables were mode-imputed, other variables median-imputed, and scaling was fitted within training folds. Both XGBoost models used XGBClassifier.
 
 | Rank by AUC point estimate | Model | Mean seed OOF AUC ± SD | 95% CI for mean seed AUC |
 |---:|---|---:|---|
-| 1 | Fixed Cand4 GBM (this study) | 0.7599 ± 0.0184 | 0.6729–0.8394 |
+| 1 | Fixed GBM (this study) | 0.7599 ± 0.0184 | 0.6729–0.8394 |
 | 2 | Bogey et al. - RF (d=5) | 0.7438 ± 0.0054 | 0.6498–0.8295 |
 | 3 | Bogey et al. - GBM (d=3) | 0.7434 ± 0.0162 | 0.6522–0.8288 |
 | 4 | Otieno et al. - XGBoost (d=6) | 0.7315 ± 0.0172 | 0.6403–0.8181 |
