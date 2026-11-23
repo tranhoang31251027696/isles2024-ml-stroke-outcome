@@ -1,6 +1,15 @@
-# Licenses
+# Repository Dual-Licensing
 
-This repository contains both software source code and derived scientific data artifacts, each distributed under their respective licenses:
+This repository contains both software source code and derived scientific data artifacts, each distributed under their respective licenses to comply with the ShareAlike terms of the source ISLES 2024 dataset:
+
+| Component | Target Paths / Files | Applicable License | File |
+| :--- | :--- | :--- | :--- |
+| **Software and Source Code** | `src/*.py`, pipeline runner scripts, figure generation code, and verification utilities | **MIT License** | [LICENSE-MIT](LICENSE-MIT) |
+| **Derived Scientific Data Artifacts** | Cross-validation fold assignments (`outputs/stage_a_data/fold_manifest.csv`), label-free out-of-fold predicted probabilities (`outputs/stage_b_training/primary_oof_predictions.csv`, `outputs/stage_c_evaluation/patient_mean_predictions.csv`, `outputs/stage_ac_revision_checks/oof_predictions.csv`), and aggregate result tables (`results/tables/`, `outputs/`) | **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** | [LICENSE-CC-BY-NC-SA](LICENSE-CC-BY-NC-SA) |
+| **Figures and Visualizations** | `results/figures/*.tif`, `outputs/stage_d_figures/` | **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** | [LICENSE-CC-BY-NC-SA](LICENSE-CC-BY-NC-SA) |
+| **Primary Clinical Dataset** | `data/source_v7/` (not hosted here; downloaded from Zenodo) | **CC BY-NC-SA 4.0** | [Zenodo 10.5281/zenodo.17652035](https://doi.org/10.5281/zenodo.17652035) |
+
+---
 
 ## 1. Software and Source Code (MIT License)
 
@@ -24,9 +33,13 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+---
+
 ## 2. Derived Data Artifacts and Documentation (CC BY-NC-SA 4.0)
 
 All data derivatives in this repository—including cross-validation fold assignments (`outputs/stage_a_data/fold_manifest.csv`), label-free out-of-fold predicted probabilities (`outputs/stage_b_training/primary_oof_predictions.csv`, `outputs/stage_c_evaluation/patient_mean_predictions.csv`, `outputs/stage_ac_revision_checks/oof_predictions.csv`), aggregate result tables, and documentation—are derived from the ISLES 2024 public dataset (Zenodo DOI: 10.5281/zenodo.17652035) and are distributed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0) in accordance with its ShareAlike terms.
 
 To view a copy of this license, visit:
 https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+*Note: Authors should confirm institutional intellectual property and repository licensing policies with their university library or legal counsel.*

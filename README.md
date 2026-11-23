@@ -22,11 +22,18 @@ During manuscript preparation and revision, OpenAI GPT-5.6 Terra and GPT-6.1 Sol
 
 The ISLES 2024 training data are publicly available from Zenodo version 7: [10.5281/zenodo.17652035](https://doi.org/10.5281/zenodo.17652035) under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license (CC BY-NC-SA 4.0). Download the source data and place them under `data/source_v7/` as described in [data/README.md](data/README.md).
 
-## Project licensing
+## Licensing and terms of use
 
-This repository is dual-licensed:
-- **Software and source code**: All Python scripts, pipeline runners, figure generators, and verification utilities in `src/` are distributed under the [MIT License](LICENSE).
-- **Derived scientific data artifacts**: Fold assignments (`outputs/stage_a_data/fold_manifest.csv`), label-free out-of-fold predicted probabilities (`outputs/stage_b_training/primary_oof_predictions.csv`, `outputs/stage_c_evaluation/patient_mean_predictions.csv`, `outputs/stage_ac_revision_checks/oof_predictions.csv`), and aggregate result tables are derived from the ISLES 2024 training dataset and are distributed in accordance with ShareAlike provisions under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+This repository uses a dual-licensing structure to distinguish between permissive software code and derived scientific data artifacts subject to the ShareAlike provisions of the source ISLES 2024 dataset:
+
+| Component | Target Paths / Files | Applicable License | Details |
+| :--- | :--- | :--- | :--- |
+| **Software and Source Code** | `src/*.py`, pipeline runner scripts, figure generation code, and verification utilities | **[MIT License](LICENSE-MIT)** | Permissive open-source license: free academic and commercial use, modification, and distribution with copyright attribution. |
+| **Derived Scientific Data Artifacts** | Cross-validation fold assignments (`outputs/stage_a_data/fold_manifest.csv`), label-free out-of-fold predicted probabilities (`outputs/stage_b_training/primary_oof_predictions.csv`, `outputs/stage_c_evaluation/patient_mean_predictions.csv`, `outputs/stage_ac_revision_checks/oof_predictions.csv`), and aggregate result tables (`results/tables/`, `outputs/`) | **[CC BY-NC-SA 4.0](LICENSE-CC-BY-NC-SA)** | Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International: requires attribution to ISLES 2024 and authors, non-commercial use, and distribution of derivative works under identical ShareAlike terms. |
+| **Figures and Visualizations** | `results/figures/*.tif`, `outputs/stage_d_figures/` | **[CC BY-NC-SA 4.0](LICENSE-CC-BY-NC-SA)** | Free for non-commercial academic reuse and distribution with attribution. |
+| **Primary Clinical Dataset** | `data/source_v7/` (not hosted here; downloaded from Zenodo) | **[CC BY-NC-SA 4.0](https://doi.org/10.5281/zenodo.17652035)** | Subject to the original ISLES 2024 dataset terms. |
+
+> **Institutional compliance note:** Authors should confirm repository dual-licensing with their university legal counsel or library scholarly communications division in accordance with institutional intellectual property policies.
 
 ## Environment and analysis
 
