@@ -9,7 +9,7 @@ from PIL import Image
 from round2_common import ROOT,FAMILIES,FEATURES,load_cohort,dump,grid12
 
 plt.rcParams.update({'font.family':'Arial','font.size':10,'axes.spines.top':False,'axes.spines.right':False})
-LABEL={'GBM':'Fixed Cand4 GBM',
+LABEL={'GBM':'Fixed GBM',
        'THRIVE_OOF_LR':'THRIVE (OOF calibration)','SPAN100_OOF_LR':'SPAN-100 (OOF calibration)'}
 COLORS=['#0072B2','#009E73','#CC79A7']
 OUT=ROOT/'outputs/stage_d_figures'

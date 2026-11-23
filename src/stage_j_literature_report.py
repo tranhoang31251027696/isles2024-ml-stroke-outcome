@@ -21,17 +21,16 @@ def main():
     compare['delta_V3_minus_old']=compare.mean_seed_auc_V3-compare.mean_seed_auc_old
     compare.to_csv(out/'old_vs_V3_literature.csv',index=False)
     lines=['# Literature benchmark — V3','',
-        'Tái huấn luyện 8 cấu hình literature: 129 ca, cùng 22 biến, 5 seed × 10 outer folds như GBM V3. 400 lần fit.',
-        'Dùng missing gốc v7; binary điền mode, biến khác median, scaler fit trên training fold. Hai XGBoost dùng XGBClassifier thật.',
-        '', '| Hạng theo điểm AUC | Mô hình | Mean seed OOF AUC ± SD | 95% CI của mean seed AUC |',
+        'Eight fixed literature configurations were refitted on 129 patients with the same 22 predictors and 5 seeds × 10 outer folds used for the V3 GBM (400 fits).',
+        'Official v7 source missingness was used; binary variables were mode-imputed, other variables median-imputed, and scaling was fitted within training folds. Both XGBoost models used XGBClassifier.',
+        '', '| Rank by AUC point estimate | Model | Mean seed OOF AUC ± SD | 95% CI for mean seed AUC |',
         '|---:|---|---:|---|']
     for rank,(_,r) in enumerate(t.iterrows(),1):lines.append(f'| {rank} | {r.model} | {r.mean_seed_auc:.4f} ± {r.sd_seed_auc:.4f} | {r.mean_seed_auc_CI95_low:.4f}–{r.mean_seed_auc_CI95_high:.4f} |')
-    lines+=['','Cấu hình literature được giữ cố định, GBM chính cố định Cand4 sau khảo sát trên cohort; bảy họ khác dùng inner CV. Đây là benchmark bổ sung, không chứng minh superiority hay equal tuning.',
-        'Xếp hạng là thứ tự điểm ước lượng, không tự chứng minh khác biệt thống kê. CI/p dùng paired patient bootstrap có điều kiện trên dự đoán đã fit, 2.000 lần; p được điều chỉnh Holm cho 8 so sánh với GBM.',
-        'Đây là các cấu hình tái triển khai trên cohort hiện tại, không phải hiệu năng đã công bố của các bài nguồn và không phải external validation.',
-        'Manuscript/response chưa được sửa trong lần chạy này.','']
+    lines+=['','Literature configurations were held fixed. The primary GBM was retained after exploratory work on this cohort, whereas the other seven families used inner CV. This auxiliary benchmark does not establish algorithm superiority or equal tuning.',
+        'Ranking is based on point estimates and does not itself establish a statistical difference. CIs and p values use a conditional paired patient bootstrap with 2,000 replicates; p values are Holm-adjusted across eight comparisons with GBM.',
+        'These are reimplementations on the present cohort, not the published performance of the source studies and not external validation.','']
     report='\n'.join(lines);(out/'LITERATURE_V3_REPORT.md').write_text(report,encoding='utf-8')
-    main=ROOT/'V3_RUN_REPORT.md';text=main.read_text(encoding='utf-8') if main.exists() else '# V3 analysis\n';marker='\n## Literature benchmark bổ sung sau lần chạy chính\n'
+    main=ROOT/'V3_RUN_REPORT.md';text=main.read_text(encoding='utf-8') if main.exists() else '# V3 analysis\n';marker='\n## Auxiliary literature benchmark\n'
     text=text.split(marker)[0]+marker+'\n'+report;main.write_text(text,encoding='utf-8')
     dump(out/'report_verification.json',{'all_nine_auc_and_sd_recomputed':True,'historical_comparison_rows':len(compare),
         'auxiliary_fixed_configuration_benchmark':True,'not_an_equal_tuning_comparison':True})
